@@ -1,0 +1,1393 @@
+/* Makes element sizing easier to control */
+* {
+    box-sizing: border-box;
+}
+
+
+/* Styles the entire webpage */
+body {
+    margin: 0;
+
+    font-family:
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    background-color: #fff7fb;
+
+    color: #4b3b46;
+}
+
+
+/*
+    White section at the very top.
+
+    This ends directly after the subtitle.
+*/
+.top-banner {
+    width: 100%;
+
+    padding: 50px 20px 35px;
+
+    text-align: center;
+
+    background-color: white;
+
+    border-bottom: 1px solid #f1dbe6;
+
+    animation: fade-down 0.6s ease;
+}
+
+
+/* Small text above the main title */
+.small-heading {
+    margin-top: 0;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: #b56d91;
+}
+
+
+/* Main title */
+h1 {
+    margin-top: 0;
+
+    margin-bottom: 8px;
+
+    font-size: 38px;
+
+    color: #633d52;
+
+    letter-spacing: -1px;
+}
+
+
+/* Subtitle under the main title */
+.subtitle {
+    margin-top: 0;
+
+    margin-bottom: 0;
+
+    color: #8a7180;
+
+    font-size: 14px;
+}
+
+
+/* Keeps the main content centered on the page */
+main {
+    max-width: 1350px;
+
+    margin: auto;
+
+    padding: 30px 40px 40px;
+}
+
+
+/* Holds the quick links to job websites */
+.job-links {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 0;
+
+    margin-bottom: 38px;
+}
+
+
+/* Styles each job website link like a button */
+.job-link-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 44px;
+
+    padding: 10px 16px;
+
+    border: 1px solid #e5bfd1;
+
+    border-radius: 12px;
+
+    background-color: white;
+
+    color: #a75c80;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.15s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Controls the size of the job website logos */
+.job-link-logo {
+    width: 22px;
+
+    height: 22px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+
+/* Makes job links react when hovered */
+.job-link-button:hover {
+    background-color: #fcebf3;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 14px rgba(181, 109, 145, 0.12);
+}
+
+
+/* Makes job links press inward when clicked */
+.job-link-button:active {
+    transform: scale(0.97);
+}
+
+
+/* Holds all of the counter cards */
+.stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    gap: 14px;
+
+    margin-bottom: 40px;
+}
+
+
+/* Styles each individual counter card */
+.stat-card {
+    padding: 18px 12px;
+
+    text-align: center;
+
+    background-color: white;
+
+    border: 1px solid #f1dbe6;
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+/* Makes stat cards gently lift when hovered */
+.stat-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #e9bfd3;
+
+    box-shadow:
+        0 8px 20px rgba(181, 109, 145, 0.12);
+}
+
+
+/* Styles the text inside each counter card */
+.stat-card p {
+    margin: 0;
+
+    color: #927889;
+
+    white-space: nowrap;
+
+    font-size: 13px;
+}
+
+
+/* Styles the number inside each counter card */
+.stat-card span {
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    color: #b45883;
+}
+
+
+/* Holds the My Applications heading and buttons */
+.application-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 10px;
+}
+
+
+/* Styles the My Applications heading */
+.application-heading h2 {
+    margin-top: 0;
+
+    margin-bottom: 0;
+
+    color: #633d52;
+}
+
+
+/* Styles the smaller text under My Applications */
+.application-heading p {
+    margin-top: 14px;
+
+    margin-bottom: 0;
+
+    color: #927889;
+
+    font-size: 13px;
+}
+
+
+/* Holds the Add and Save buttons */
+.application-buttons {
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+}
+
+
+/* Styles the Add Application button */
+#add-application-button {
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background-color: #d77da8;
+
+    color: white;
+
+    font-family:
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Changes the Add Application button when hovered */
+#add-application-button:hover {
+    background-color: #c96d99;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 14px rgba(181, 109, 145, 0.18);
+}
+
+
+/* Makes the Add Application button press inward */
+#add-application-button:active {
+    transform: scale(0.97);
+}
+
+
+/* Styles the Save Changes button */
+#save-button {
+    padding: 12px 18px;
+
+    border: 1px solid #d77da8;
+
+    border-radius: 12px;
+
+    background-color: white;
+
+    color: #b45883;
+
+    font-family:
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Changes the Save Changes button when hovered */
+#save-button:hover {
+    background-color: #fcebf3;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 14px rgba(181, 109, 145, 0.12);
+}
+
+
+/* Makes the Save button press inward */
+#save-button:active {
+    transform: scale(0.97);
+}
+
+
+/* Styles the save confirmation message */
+.save-message {
+    min-height: 20px;
+
+    margin-top: 0;
+
+    margin-bottom: 10px;
+
+    text-align: right;
+
+    color: #b45883;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    opacity: 0;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* Shows the save message */
+.save-message.show {
+    opacity: 1;
+
+    transform: translateY(-2px);
+}
+
+
+/* Holds the table */
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+
+    background-color: white;
+
+    border: 1px solid #f1dbe6;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 5px 15px rgba(181, 109, 145, 0.06);
+}
+
+
+/* Styles the whole table */
+table {
+    width: 100%;
+
+    min-width: 1050px;
+
+    border-collapse: collapse;
+}
+
+
+/* Styles the table headings */
+th {
+    padding: 15px;
+
+    text-align: left;
+
+    background-color: #fcebf3;
+
+    color: #704c60;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+
+/* Styles regular table cells */
+td {
+    padding: 12px;
+
+    border-top: 1px solid #f2e4eb;
+
+    vertical-align: middle;
+
+    font-size: 13px;
+}
+
+
+/* Gives each application row a smooth hover effect */
+tbody tr {
+    transition:
+        background-color 0.2s ease;
+}
+
+
+/* Highlights the full row when hovered */
+tbody tr:hover {
+    background-color: #fff9fc;
+}
+
+
+/* Animation used when a new row is added */
+.application-row.new-row {
+    animation: row-appear 0.35s ease;
+}
+
+
+/* Gives the first table column more room */
+th:first-child {
+    width: 95px;
+
+    min-width: 95px;
+
+    text-align: center;
+}
+
+
+/* Centers the final Actions column */
+th:last-child {
+    min-width: 95px;
+
+    text-align: center;
+}
+
+
+/* Gives editable table cells enough room */
+td[contenteditable="true"] {
+    min-width: 170px;
+
+    outline: none;
+
+    transition:
+        background-color 0.2s ease,
+        outline 0.2s ease;
+}
+
+
+/* Highlights the cell currently being edited */
+td[contenteditable="true"]:focus {
+    background-color: #fff4f9;
+
+    outline: 2px solid #efbad3;
+}
+
+
+/* Gives the Company Name column more room */
+.company-cell {
+    min-width: 180px;
+}
+
+
+/* Gives the Position column more room */
+.position-cell {
+    min-width: 210px;
+}
+
+
+/* Centers the Position heading */
+th:nth-child(3) {
+    text-align: center;
+}
+
+
+/* Centers the Position data cells */
+td:nth-child(3) {
+    text-align: center;
+}
+
+
+/* Styles dropdown menus and date inputs */
+select,
+input[type="date"] {
+    width: 100%;
+
+    min-width: 145px;
+
+    padding: 9px;
+
+    border: 1px solid #e8ccd9;
+
+    border-radius: 9px;
+
+    background-color: white;
+
+    color: #57434e;
+
+    font-family:
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    font-size: 12px;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+
+/* Highlights dropdowns and date inputs when selected */
+select:focus,
+input[type="date"]:focus {
+    outline: none;
+
+    border-color: #d99aba;
+
+    transform: translateY(-1px);
+}
+
+
+/* Applied status color */
+.status-applied {
+    background-color: #fff0f6;
+
+    border-color: #eab8cf;
+}
+
+
+/* Under Review status color */
+.status-under-review {
+    background-color: #f7f0ff;
+
+    border-color: #d8bcea;
+}
+
+
+/* Interview status color */
+.status-interview {
+    background-color: #f3edff;
+
+    border-color: #c9b3ea;
+}
+
+
+/* Offer status color */
+.status-offer {
+    background-color: #edf9f1;
+
+    border-color: #b7dec4;
+}
+
+
+/* Accepted status color */
+.status-accepted {
+    background-color: #e7f7ed;
+
+    border-color: #97cfa9;
+
+    font-weight: bold;
+}
+
+
+/* Rejected status color */
+.status-rejected {
+    background-color: #fff0f1;
+
+    border-color: #e6b8bd;
+}
+
+
+/* Withdrawn status color */
+.status-withdrawn {
+    background-color: #f4f1f3;
+
+    border-color: #d4c7ce;
+}
+
+
+/* Centers the favorite star */
+.favorite-cell {
+    width: 95px;
+
+    min-width: 95px;
+
+    text-align: center;
+}
+
+
+/* Styles the favorite star button */
+.favorite-button {
+    border: none;
+
+    background-color: transparent;
+
+    color: #c8a8b7;
+
+    font-size: 26px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        color 0.15s ease;
+}
+
+
+/* Styles the star when favorited */
+.favorite-button.favorited {
+    color: #d77da8;
+
+    animation: star-pop 0.3s ease;
+}
+
+
+/* Makes the favorite star larger when hovered */
+.favorite-button:hover {
+    transform: scale(1.18);
+}
+
+
+/* Styles the Notes button */
+.notes-button {
+    padding: 9px 12px;
+
+    border: 1px solid #e8ccd9;
+
+    border-radius: 9px;
+
+    background-color: #fff7fb;
+
+    color: #9b607d;
+
+    font-family:
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        transform 0.15s ease,
+        background-color 0.2s ease;
+}
+
+
+/* Changes the Notes button when hovered */
+.notes-button:hover {
+    background-color: #fcebf3;
+
+    transform: translateY(-1px);
+}
+
+
+/* Shows when an application already has notes */
+.notes-button.has-notes {
+    background-color: #fcebf3;
+
+    color: #b45883;
+
+    font-weight: bold;
+}
+
+
+/* Styles the delete button */
+.delete-button {
+    padding: 9px 12px;
+
+    border: 1px solid #e4a6b5;
+
+    border-radius: 9px;
+
+    background-color: #fff1f4;
+
+    color: #b4425e;
+
+    font-family:
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        background-color 0.2s ease;
+}
+
+
+/* Changes the delete button when hovered */
+.delete-button:hover {
+    background-color: #f9dce3;
+
+    transform: translateY(-1px);
+}
+
+
+/* Makes the Delete button press inward */
+.delete-button:active {
+    transform: scale(0.96);
+}
+
+
+/* Centers the last table cell */
+td:last-child {
+    text-align: center;
+}
+
+
+/* Styles the empty table message */
+.empty-message {
+    margin-top: 20px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    color: #9a7b8c;
+
+    animation: fade-in 0.4s ease;
+}
+
+
+/* Makes the heart larger */
+.empty-heart {
+    margin: 0;
+
+    font-size: 35px;
+
+    color: #d77da8;
+
+    animation: heart-float 2.5s ease-in-out infinite;
+}
+
+
+/* Hides an element */
+.hidden {
+    display: none;
+}
+
+
+/* Creates the background behind the Notes popup */
+.notes-modal {
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    padding: 20px;
+
+    background-color: rgba(75, 59, 70, 0.35);
+
+    animation: fade-in 0.2s ease;
+}
+
+
+/* Styles the Notes popup */
+.notes-modal-content {
+    max-width: 520px;
+
+    margin: 120px auto;
+
+    padding: 25px;
+
+    background-color: white;
+
+    border: 1px solid #f1dbe6;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(75, 59, 70, 0.16);
+
+    animation: modal-pop 0.25s ease;
+}
+
+
+/* Styles the heading inside Notes */
+.notes-modal-content h2 {
+    margin-top: 0;
+
+    margin-bottom: 8px;
+
+    color: #633d52;
+}
+
+
+/* Styles the text inside Notes */
+.notes-modal-content p {
+    margin-top: 0;
+
+    color: #927889;
+
+    font-size: 13px;
+}
+
+
+/* Styles the Notes typing area */
+#notes-textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #e8ccd9;
+
+    border-radius: 10px;
+
+    font-family:
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    font-size: 13px;
+
+    color: #4b3b46;
+
+    resize: vertical;
+}
+
+
+/* Highlights the Notes typing area */
+#notes-textarea:focus {
+    outline: 2px solid #efbad3;
+
+    border-color: transparent;
+}
+
+
+/* Holds the Notes popup buttons */
+.notes-modal-buttons {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 18px;
+}
+
+
+/* Styles the Cancel button */
+#cancel-notes-button {
+    padding: 10px 15px;
+
+    border: 1px solid #e8ccd9;
+
+    border-radius: 10px;
+
+    background-color: white;
+
+    color: #765d6b;
+
+    font-family:
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    cursor: pointer;
+}
+
+
+/* Styles the Save Notes button */
+#save-notes-button {
+    padding: 10px 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #d77da8;
+
+    color: white;
+
+    font-family:
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* Changes Save Notes button when hovered */
+#save-notes-button:hover {
+    background-color: #c96d99;
+}
+
+
+/* Background behind the delete confirmation */
+.delete-modal {
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    padding: 20px;
+
+    background-color: rgba(75, 59, 70, 0.35);
+
+    animation: fade-in 0.2s ease;
+}
+
+
+/* Small square delete popup */
+.delete-modal-content {
+    position: relative;
+
+    max-width: 380px;
+
+    margin: 180px auto;
+
+    padding: 30px 25px 25px;
+
+    text-align: center;
+
+    background-color: white;
+
+    border: 1px solid #efcbdc;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 16px 45px rgba(75, 59, 70, 0.18);
+
+    animation: modal-pop 0.25s ease;
+}
+
+
+/* X button in the top right */
+.delete-modal-close {
+    position: absolute;
+
+    top: 10px;
+
+    right: 12px;
+
+    width: 32px;
+
+    height: 32px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: transparent;
+
+    color: #aa718d;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+
+/* Changes X button when hovered */
+.delete-modal-close:hover {
+    background-color: #fff0f6;
+
+    transform: scale(1.08);
+}
+
+
+/* Small warning circle */
+.delete-warning-icon {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 44px;
+
+    height: 44px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    background-color: #fff0f4;
+
+    color: #c65f7e;
+
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+
+/* Delete popup heading */
+.delete-modal-content h2 {
+    margin-top: 0;
+
+    margin-bottom: 12px;
+
+    color: #633d52;
+}
+
+
+/* Delete popup message */
+.delete-modal-content p {
+    margin-top: 0;
+
+    margin-bottom: 24px;
+
+    color: #8b7180;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* Holds the Yes and No buttons */
+.delete-modal-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+
+/* Styles the No button */
+#delete-no-button {
+    min-width: 90px;
+
+    padding: 10px 16px;
+
+    border: 1px solid #e8ccd9;
+
+    border-radius: 10px;
+
+    background-color: white;
+
+    color: #765d6b;
+
+    font-family:
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        background-color 0.2s ease;
+}
+
+
+/* No button hover */
+#delete-no-button:hover {
+    background-color: #fff7fb;
+
+    transform: translateY(-1px);
+}
+
+
+/* Styles the Yes button */
+#delete-yes-button {
+    min-width: 90px;
+
+    padding: 10px 16px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #d77da8;
+
+    color: white;
+
+    font-family:
+        Menlo,
+        Monaco,
+        Consolas,
+        monospace;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        background-color 0.2s ease;
+}
+
+
+/* Yes button hover */
+#delete-yes-button:hover {
+    background-color: #c96d99;
+
+    transform: translateY(-1px);
+}
+
+
+/* Header entrance animation */
+@keyframes fade-down {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* General fade animation */
+@keyframes fade-in {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* New row animation */
+@keyframes row-appear {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Favorite star animation */
+@keyframes star-pop {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.35);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* Notes and delete popup animation */
+@keyframes modal-pop {
+
+    from {
+        opacity: 0;
+
+        transform: scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+
+}
+
+
+/* Small floating heart animation */
+@keyframes heart-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+}
+
+
+/* Rearranges counters on medium screens */
+@media (max-width: 900px) {
+
+    .stats {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+/* Rearranges the page on smaller screens */
+@media (max-width: 600px) {
+
+    .top-banner {
+        padding:
+            38px 20px 28px;
+    }
+
+
+    h1 {
+        font-size: 30px;
+    }
+
+
+    main {
+        padding:
+            25px 20px;
+    }
+
+
+    .stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .application-heading {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .application-buttons {
+        flex-direction: column;
+    }
+
+
+    #add-application-button,
+    #save-button {
+        width: 100%;
+    }
+
+
+    .job-links {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .job-link-button {
+        width: 100%;
+    }
+
+
+    .notes-modal-content {
+        margin: 60px auto;
+    }
+
+
+    .delete-modal-content {
+        margin: 100px auto;
+    }
+
+}
+
+
+/* Reduces animation for users who prefer less movement */
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+}

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the website scale better on smaller screens -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!-- Text that appears on the browser tab -->
+    <title>Bri's Application Tracker</title>
+
+    <!-- Connects this HTML page to the CSS file -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <!-- Connects this HTML page to the JavaScript file -->
+    <script
+        src="script.js"
+        defer
+    ></script>
+</head>
+
+<body>
+
+
+<!-- White section at the top of the website -->
+<header class="top-banner">
+
+    <p class="small-heading">
+        ✿ JOB & INTERNSHIP TRACKER ✿
+    </p>
+
+    <h1>
+        Bri's Application Tracker
+    </h1>
+
+    <p class="subtitle">
+        ♡ Keep track of every opportunity in one place ♡
+    </p>
+
+</header>
+
+
+<main>
+
+
+    <!-- Quick links to job and internship websites -->
+    <div class="job-links">
+
+        <a
+            class="job-link-button"
+            href="https://www.linkedin.com/jobs/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <img
+                class="job-link-logo"
+                src="images/linkedin.png"
+                alt=""
+            >
+
+            LinkedIn
+
+        </a>
+
+
+        <a
+            class="job-link-button"
+            href="https://pittstate.12twenty.com/dashboard/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <img
+                class="job-link-logo"
+                src="images/gorillas4hire.png"
+                alt=""
+            >
+
+            Gorillas4Hire
+
+        </a>
+
+
+        <a
+            class="job-link-button"
+            href="https://app.joinhandshake.com/home"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <img
+                class="job-link-logo"
+                src="images/handshake.png"
+                alt=""
+            >
+
+            Handshake
+
+        </a>
+
+    </div>
+
+
+    <!-- Dashboard counters -->
+    <div class="stats">
+
+        <div class="stat-card">
+
+            <p>
+                Applications:
+                <span id="application-count">0</span>
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <p>
+                Internships:
+                <span id="internship-count">0</span>
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <p>
+                Jobs:
+                <span id="job-count">0</span>
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <p>
+                Temporary Hires:
+                <span id="temporary-count">0</span>
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <p>
+                Interviews:
+                <span id="interview-count">0</span>
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <p>
+                Offers:
+                <span id="offer-count">0</span>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Section above the application table -->
+    <div class="application-heading">
+
+        <div>
+
+            <h2>
+                My Applications:
+            </h2>
+
+            <p>
+                Click directly into a box to edit it! :)
+            </p>
+
+        </div>
+
+
+        <!-- Holds the Add and Save buttons -->
+        <div class="application-buttons">
+
+            <button
+                id="add-application-button"
+                type="button"
+            >
+                + Add Application
+            </button>
+
+
+            <button
+                id="save-button"
+                type="button"
+            >
+                Save Changes
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Message shown after saving -->
+    <p
+        id="save-message"
+        class="save-message"
+    >
+    </p>
+
+
+    <!-- Holds the application table -->
+    <div class="table-container">
+
+        <table id="application-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Favorite
+                    </th>
+
+                    <th>
+                        Company Name
+                    </th>
+
+                    <th>
+                        Position
+                    </th>
+
+                    <th>
+                        Type
+                    </th>
+
+                    <th>
+                        Status
+                    </th>
+
+                    <th>
+                        Date Applied
+                    </th>
+
+                    <th>
+                        Notes
+                    </th>
+
+                    <th>
+                        Actions
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="application-table-body">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <!-- Message shown when there are no applications -->
+    <div
+        id="empty-message"
+        class="empty-message"
+    >
+
+        <p class="empty-heart">
+            ♡
+        </p>
+
+        <p>
+            No applications yet.
+        </p>
+
+        <p>
+            Add your first one whenever you're ready!
+        </p>
+
+    </div>
+
+</main>
+
+
+<!-- Notes popup -->
+<div
+    id="notes-modal"
+    class="notes-modal hidden"
+>
+
+    <div class="notes-modal-content">
+
+        <h2>
+            Application Notes
+        </h2>
+
+        <p>
+            Add anything you want to remember about this opportunity.
+        </p>
+
+
+        <textarea
+            id="notes-textarea"
+            rows="8"
+            placeholder="Recruiter name, follow-up information, interview notes..."
+        ></textarea>
+
+
+        <div class="notes-modal-buttons">
+
+            <button
+                id="cancel-notes-button"
+                type="button"
+            >
+                Cancel
+            </button>
+
+
+            <button
+                id="save-notes-button"
+                type="button"
+            >
+                Save Notes
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Custom delete confirmation popup -->
+<div
+    id="delete-modal"
+    class="delete-modal hidden"
+>
+
+    <div class="delete-modal-content">
+
+        <!-- X button in the corner -->
+        <button
+            id="close-delete-button"
+            class="delete-modal-close"
+            type="button"
+            aria-label="Close delete confirmation"
+        >
+            ×
+        </button>
+
+
+        <!-- Small warning icon -->
+        <div class="delete-warning-icon">
+            !
+        </div>
+
+
+        <h2 id="delete-modal-title">
+            Delete Application?
+        </h2>
+
+
+        <p id="delete-modal-message">
+            Are you sure you would like to delete this application?
+        </p>
+
+
+        <div class="delete-modal-buttons">
+
+            <button
+                id="delete-no-button"
+                type="button"
+            >
+                No
+            </button>
+
+
+            <button
+                id="delete-yes-button"
+                type="button"
+            >
+                Yes
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
