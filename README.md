@@ -2,6 +2,10 @@
 
 Application Tracker is a simple web app I built to keep track of jobs, internships, and other opportunities.
 
+## Live Demo
+
+[View the Application Tracker](https://itzzthebri.github.io/Application-Tracker/)
+
 ## Features
 
 - Add and edit applications
