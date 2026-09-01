@@ -10,7 +10,7 @@ Application Tracker is a simple web app I built to keep track of jobs, internshi
 
 ### Sample Data
 
-![Application Tracker with Sample Data(images/SampleData1.png)
+![Application Tracker with Sample Data(images/SampleData.png)
 
 ### Clean Startup
 
