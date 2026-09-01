@@ -6,6 +6,16 @@ Application Tracker is a simple web app I built to keep track of jobs, internshi
 
 [View the Application Tracker](https://itzzthebri.github.io/Application-Tracker/)
 
+## Screenshots
+
+### Sample Data
+
+![Application Tracker with Sample Data](images/SampleData.png)
+
+### Clean Startup
+
+![Application Tracker Clean Startup](images/StartupMain.png)
+
 ## Features
 
 - Add and edit applications
