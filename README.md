@@ -32,4 +32,4 @@ This project helped me get more practice with JavaScript, local storage, forms, 
 
 ## Author
 
-Brianna
+Brianna Boucher
